@@ -1,0 +1,294 @@
+/* line 4, C:/Sites/myapp/app/assets/stylesheets/comments.scss */
+.rated, .rating {
+  padding-left: 30px;
+}
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/* line 5, C:/Sites/myapp/app/assets/stylesheets/products.scss */
+.block h3 {
+  font-family: Lucida Console, serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* line 11, C:/Sites/myapp/app/assets/stylesheets/products.scss */
+.block .thumbnail {
+  padding: 10px;
+  border: 3px solid darkgrey;
+}
+
+/* line 16, C:/Sites/myapp/app/assets/stylesheets/products.scss */
+.block .thumbnail:hover {
+  border: 3px solid black;
+}
+
+/* line 19, C:/Sites/myapp/app/assets/stylesheets/products.scss */
+.block .description {
+  height: 30px;
+  padding-left: 0px;
+}
+
+/* line 25, C:/Sites/myapp/app/assets/stylesheets/products.scss */
+.thumbnail-img {
+  min-height: 250px;
+  max-height: 250px;
+}
+
+/* line 29, C:/Sites/myapp/app/assets/stylesheets/products.scss */
+.block {
+  font-family: Lucida Console, serif;
+}
+/* line 1, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 10, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 17, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 23, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 26, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 30, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 36, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 40, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 47, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 52, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 56, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 62, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 70, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 81, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 87, C:/Sites/myapp/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 4, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+h1 {
+  font-size: 15px;
+  text-align: center;
+  color: red;
+  border: line px blue;
+  padding: 5px;
+  background-color: lightgrey;
+}
+
+/* line 13, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
+/* line 17, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.carousel-caption {
+  color: black;
+  font-size: 25px;
+  font-family: "Lucida Console";
+  font-style: oblique;
+}
+
+/* line 25, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.carousel-indicators {
+  bottom: 0;
+}
+
+/* line 33, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.input-group {
+  padding: 8px 12px;
+  border-radius: 0px;
+  border-width: 1px;
+  color: #777777;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  box-shadow: none;
+  outline: none;
+}
+
+/* line 52, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.navbar-collapse form[role="search"] button[type="reset"] {
+  display: none;
+}
+
+/* line 55, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.navbar-brand {
+  font-size: 30px;
+}
+
+/* line 59, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.div_text_shadow {
+  color: #d9d9d9;
+  text-shadow: #2e2e2e 0px 4px 5px;
+}
+
+/* line 66, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.title-details {
+  height: 60px;
+}
+
+/* line 70, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.field {
+  padding: 16px 12px;
+  font-size: 14pt;
+  font-style: italic;
+  color: #a0a0a0;
+  box-shadow: none;
+}
+
+/* line 78, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.pull-right {
+  margin: 0 auto;
+  padding: 1px;
+  position: relative;
+}
+
+/* line 83, C:/Sites/myapp/app/assets/stylesheets/static_pages.scss */
+.description {
+  padding-left: 30px;
+  margin: 30px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+footer {
+	padding: 20px;
+	text-align: center;
+}
+.alert-info {
+	color:red;
+}
+.notice-info {
+	color:green;
+}
+.description {
+	padding-left: 30px;
+}

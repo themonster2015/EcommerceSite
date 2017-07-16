@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+  
+  <!-- <div class="container"> -->
+    <div class="row">
+      <% cache(cache_key_for_products) do %>
+        <%= render @products %>
+      <% end %>
+
+
+      
+    </div>
+    
+  <!-- </div> -->
+<% if signed_in? && current_user.admin? %>
+    <%= link_to 'New Product', new_product_path, class:'btn btn-primary new-product-btn' %>
+<% end %>
