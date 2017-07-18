@@ -83,7 +83,12 @@
         </div><!--/.container-fluid -->
       </nav>
 
-
+      <% if notice %>
+          <p id="notice" class="alert notice-info"><%= notice %></p>
+      <% end %>
+        <% if alert %>
+          <p id="alert" class="alert alert-info"><%= alert %></p>
+      <% end %>
     <%= yield %>
     <footer>
 		  &copy; 2017 DermaStore Spain
