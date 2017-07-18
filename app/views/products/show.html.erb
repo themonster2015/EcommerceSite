@@ -1,8 +1,8 @@
-div class="row">
+<div class="row">
 
   <div class="col-sm-6 col-md-6">
    <div class="thumbnail">
-      <%= image_tag(@product.image_url, class: "img-responsive")  %>
+      <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "image_tag(@product.image_url(:large))")  %>
     </div>
   </div>
 
@@ -33,17 +33,26 @@ div class="row">
         Average Rating:
           <p class="rated" data-score="<%= @product.average_rating%>"></p>
       </p>
-      <%= form_tag "/payments/create", :id =>"stripe-button" do %>
-          <%= hidden_field_tag(:product_id, @product.id) %>
-          <%= render partial: "shared/stripe_checkout_button" %>
-         <% end %>
+        <%= form_tag "/payments/create", :id =>"stripe-button" do %>
+          
+            <%= hidden_field_tag(:product_id, @product.id) %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+           
+          
+        <% end %>
          <br>
-      <span class="btn btn-primary btn-colour-change" role="button"><%=  link_to  'Edit'  , edit_product_path(@product)  %></span>
+         
+      <% if signed_in? %>
+        <span class="btn btn-primary btn-colour-change" role="button"><%=  link_to  'Edit'  , edit_product_path(@product)  %></span>
+      <% end %>
+
       <span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Back', products_path %></span>
+      
     </div>
   </div>       
 </div>
   
+
   
 </div>
 <br>
