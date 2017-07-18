@@ -1,4 +1,5 @@
 <div class="product-reviews">
+<% @comments = @product.comments.paginate(:page => params[:page] , :per_page => 3)  %>
     <% @comments.each do |comment| %>
         <div class="row">
             <hr>
@@ -9,4 +10,6 @@
             <p><%= comment.body %></p>
         </div>
     <% end %>
+    <%= will_paginate @comments %>
+  
 </div>
