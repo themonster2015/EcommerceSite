@@ -1,7 +1,8 @@
-<div class="row">
+<div class="row" data-product-id="<%= @product.id %>">
 
   <div class="col-sm-6 col-md-6">
    <div class="thumbnail">
+   <% cache @product do %>
       <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "image_tag(@product.image_url(:large))")  %>
     </div>
   </div>
@@ -29,17 +30,18 @@
         <%= @product.price %>
       </p>
       
-      <p>
-        Average Rating:
-          <p class="rated" data-score="<%= @product.average_rating%>"></p>
-      </p>
+      <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
+      <% if signed_in? %>
         <%= form_tag "/payments/create", :id =>"stripe-button" do %>
           
             <%= hidden_field_tag(:product_id, @product.id) %>
             <%= render partial: "shared/stripe_checkout_button" %>
-           
-          
-        <% end %>
+            <% end %>
+      <% else %>   
+          <span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Buy Now', new_user_session_path %></span>
+        
+      <% end %>
+        
          <br>
          
       <% if signed_in? %>
@@ -52,9 +54,11 @@
   </div>       
 </div>
   
-
+ 
   
 </div>
 <br>
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 <%= render 'comments'  %>
+<% end %>
 <%= render 'new_comment' %>
