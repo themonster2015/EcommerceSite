@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Commercesite</title>
+    <title>Yen's Premium Skincare Store</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
@@ -11,13 +11,66 @@
   </head>
 
   <body>
-  	<nav>
+  	<!-- <nav>
 		  <ul>
 		    <li>Home</li>
 		    <li>About</li>
 		    <li>Contact</li>
 		  </ul>
-		</nav>
+		</nav> -->
+
+    <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand div_text_shadow" >Dermalogica</a> -->
+            <%= link_to "Dermalogica", root_path, class: "navbar-brand div_text_shadow" %>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
+              <li class="<%= 'active' if current_page?(static_pages_about_path)%>"><%= link_to "About", static_pages_about_path %></li>
+              
+              <li class="<%= 'active' if current_page?(products_path)%>"><%= link_to "Products", products_path %></li>
+              <li class="<%= 'active' if current_page?(static_pages_contact_path)%>"><%= link_to "Contact", static_pages_contact_path %></li>
+            </ul>
+     <!--        <form class="navbar-form" role="search">
+          <div class="input-group">
+            <input type="text" class="form-control pull-right" style=" margin-top: 20px; width: 350px; margin-right: 35px, border: 1px solid black; background-color: #e5e5e5;" placeholder="Search">
+            <span class="input-group-btn">
+              <button type="reset" class="btn btn-default">
+                <span class="glyphicon glyphicon-remove">
+                  <span class="sr-only">Close</span>
+                </span>
+              </button>
+              <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search">
+                  <span class="sr-only">Search</span>
+                </span>
+              </button>
+            </span>
+          </div>
+        </form> -->
+            <%= form_tag("/products", class: 'navbar-form', method: "get") do %>
+           <div class="input-group"> <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag (:q), "", class: 'input-group' %>
+            <%= submit_tag("Search", class: 'input-group') %>
+            <% end %> </div>
+          </div><!--/.nav-collapse -->
+
+             
+
+
+        </div><!--/.container-fluid -->
+      </nav>
+
+
     <%= yield %>
     <footer>
 		  &copy; 2017 DermaStore Spain
