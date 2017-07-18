@@ -1,10 +1,15 @@
-<div class="row">
+div class="row">
+
   <div class="col-sm-6 col-md-6">
    <div class="thumbnail">
       <%= image_tag(@product.image_url, class: "img-responsive")  %>
     </div>
   </div>
 
+<div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
   <div class="col-sm-6 col-md-6">
     <div class="caption">
       <p>
@@ -23,18 +28,22 @@
         <strong>Price:</strong>
         <%= @product.price %>
       </p>
+      
       <p>
         Average Rating:
           <p class="rated" data-score="<%= @product.average_rating%>"></p>
       </p>
-      
-      <span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Edit', edit_product_path(@product) %></span>
+      <%= form_tag "/payments/create", :id =>"stripe-button" do %>
+          <%= hidden_field_tag(:product_id, @product.id) %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+         <% end %>
+         <br>
+      <span class="btn btn-primary btn-colour-change" role="button"><%=  link_to  'Edit'  , edit_product_path(@product)  %></span>
       <span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Back', products_path %></span>
     </div>
   </div>       
 </div>
   
-
   
 </div>
 <br>
