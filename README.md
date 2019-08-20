@@ -14,11 +14,11 @@ Clone this repo to your local drive, cd to the app directory.
 
 First, bundle install all required gems:
 
-```bundle install ````
+``` bundle install ````
 
 Secondly, seed the database:
 
-```rails db:migrate && rails db:seed````
+``` rails db:migrate && rails db:seed ````
 
 Now you can start the server
 
