@@ -1,24 +1,25 @@
-# README
+# RUBY ON RAILS E-COMMERCE APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## DESCRIPTIONS
 
-Things you may want to cover:
+This is a small demo e-commerce app building using Ruby on Rails.
 
-* Ruby version
+## LIVE LINK
 
-* System dependencies
+The live demo app can be accessed via [Ruby Ecommerce Store](https://frozen-coast-37199.herokuapp.com/)
 
-* Configuration
+## HOW TO RUN ON YOUR LOCAL COMPUTER
 
-* Database creation
+Clone this repo to your local drive, cd to the app directory.
 
-* Database initialization
+First, bundle install all required gems:
 
-* How to run the test suite
+```bundle install ````
 
-* Services (job queues, cache servers, search engines, etc.)
+Secondly, seed the database:
 
-* Deployment instructions
+```rails db:migrate && rails db:seed````
 
-* ...
+Now you can start the server
+
+```rails s ```
